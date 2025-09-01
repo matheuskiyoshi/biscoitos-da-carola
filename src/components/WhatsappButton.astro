@@ -1,0 +1,36 @@
+---
+const phone = "5599999999999"; 
+const message = "Olá, gostaria de saber mais sobre os biscoitos!"; // mensagem inicial
+const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+---
+
+<a href={whatsappUrl} target="_blank" aria-label="Fale conosco no WhatsApp" class="whatsapp-button">
+  <img src="/whatsapp-icon.svg" alt="WhatsApp" />
+</a>
+
+<style>
+  .whatsapp-button {
+    position: fixed;
+    bottom: 0.7rem;
+    right: 1.25rem;
+    background-color: #25d366;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.25rem 0.375rem rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+  }
+
+  .whatsapp-button img {
+    width: 32px;
+    height: 32px;
+  }
+</style>
