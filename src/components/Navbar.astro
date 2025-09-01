@@ -1,6 +1,8 @@
-<!-- ============================================ -->
-<!--                 Navigation                   -->
-<!-- ============================================ -->
+---
+const phone = "5599999999999"; 
+const message = "Olá, gostaria de saber mais sobre os biscoitos!"; // mensagem inicial
+const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+---
 
 <header id="cs-navigation">
     <div class="cs-container">
@@ -35,7 +37,7 @@
                 </ul>
             </div>
         </nav>
-        <a href="" class="cs-button-solid cs-nav-button">Contact Us</a>
+        <a href={whatsappUrl} target="_blank" class="cs-button-solid cs-nav-button">Mande uma mensagem</a>
         <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
     </div>
 </header>
