@@ -9,10 +9,10 @@
             <div class="cs-image-group">
                 <picture class="cs-picture">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/reviewer.jpg">
+                    <source media="(max-width: 600px)" srcset="/public/hero-image.png">
                     <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/reviewer.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/reviewer.jpg" alt="person" width="570" height="680">
+                    <source media="(min-width: 601px)" srcset="/public/hero-image.png">
+                    <img loading="lazy" decoding="async" src="/public/hero-image.png" alt="person" width="570" height="680">
                 </picture>
 
                 <!--White SVG Mask. Download the image and change the fill color to match the color of the section background below it-->
@@ -23,10 +23,10 @@
             <div class="cs-review-group">
                 <!--Stars-->
                 <p class="cs-review-text">
-                    Seu novo vício em forma de biscoito!
+                    Biscoitos artesanais que derretem no coração antes de derreter na boca!
                 </p>
-                <p>
-                    
+                <p class="cs-review-second-text">
+                    Nossos biscoitos são preparados artesanalmente, com atenção a cada detalhe, para oferecer uma experiência única de sabor e qualidade. A <strong>Biscoitos da Carola</strong> nasceu do desejo de transformar momentos simples em experiências inesquecíveis, sempre com o gostinho caseiro que conquista.
                 </p>
             </div>
         </div>
@@ -107,7 +107,7 @@
     font-weight: 500;
     font-style: normal;
     max-width: 26ch;
-    font-size: clamp(1.5625rem, 30vw, 3.4375rem);
+    font-size: clamp(1.5625rem, 30vw, 5.4375rem);
     color: var(--primary);
     margin: 0;
   }
@@ -150,6 +150,14 @@
     font-size: clamp(1.5625rem, 3vw, 2.4375rem);
     line-height: 1.2em;
     font-weight: bold;
+    text-align: inherit;
+    margin: 0 0 2.5rem 0;
+    color: var(--headerColor);
+  }
+  #reviews-1832 .cs-review-second-text{
+    
+    font-size: clamp(1.0625rem, 1.5vw, 2.0375rem);
+    line-height: 1.2em;
     text-align: inherit;
     margin: 0 0 2.5rem 0;
     color: var(--headerColor);
