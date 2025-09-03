@@ -88,19 +88,26 @@ body {
 </style>
 
 <script>
-	// Add this to your main layout or a global JS file
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const targetId = this.getAttribute('href');
-    const target = document.querySelector(targetId);
+
+// Smooth scroll for anchor links
+const anchors = document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]');
+
+anchors.forEach((anchor) => {
+  anchor.addEventListener("click", (e: MouseEvent) => {
+    e.preventDefault();
+
+    const targetId = anchor.getAttribute("href");
+    if (!targetId) return;
+
+    const target = document.querySelector<HTMLElement>(targetId);
     if (target) {
-      e.preventDefault();
       const top = target.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   });
 });
+
 </script>
